@@ -1,0 +1,2 @@
+class CourseFullException(Exception):
+    pass

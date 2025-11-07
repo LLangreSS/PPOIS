@@ -1,0 +1,2 @@
+class VisaExpiredException(Exception):
+    pass

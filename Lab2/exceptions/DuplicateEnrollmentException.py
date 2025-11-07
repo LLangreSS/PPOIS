@@ -1,0 +1,2 @@
+class DuplicateEnrollmentException(Exception):
+    pass

@@ -1,0 +1,2 @@
+class RoomCapacityException(Exception):
+    pass

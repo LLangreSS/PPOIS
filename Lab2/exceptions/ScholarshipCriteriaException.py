@@ -1,0 +1,2 @@
+class ScholarshipCriteriaException(Exception):
+    pass

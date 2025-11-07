@@ -1,0 +1,2 @@
+class InvalidGradeException(Exception):
+    pass
