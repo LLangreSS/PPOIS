@@ -1,2 +1,18 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# IDE
+.idea/
+
+# Дополнительно (по желанию)
+.DS_Store
+.vscode/
+*.log
+
+.coverage
+commands.py
+__init__.py
+.gitignore.txt
