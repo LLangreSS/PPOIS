@@ -5,14 +5,15 @@ __pycache__/
 *.pyd
 
 # IDE
-.idea/
+Lab2/.idea/
 
 # Дополнительно (по желанию)
 .DS_Store
 .vscode/
 *.log
 
-.coverage
-commands.py
-__init__.py
+Lab2/.coverage
+Lab2/commands.py
+Lab2/__init__.py
 .gitignore.txt
+Lab2/.venv
