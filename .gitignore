@@ -5,7 +5,7 @@ __pycache__/
 *.pyd
 
 # IDE
-Lab2/.idea/
+Lab2/.idea
 
 # Дополнительно (по желанию)
 .DS_Store
@@ -15,3 +15,7 @@ Lab2/.idea/
 Lab2/.coverage
 Lab2/commands.py
 Lab2/.venv
+Lab2/.pytest_cache
+.pytest_cache
+.coverage
+commands.py
