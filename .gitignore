@@ -19,3 +19,4 @@ Lab2/.pytest_cache
 .pytest_cache
 .coverage
 commands.py
+.gitignore
