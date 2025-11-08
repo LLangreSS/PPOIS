@@ -22,6 +22,11 @@ class Student(Person):
         payment.process()
         return payment
 
+    def transfer_to_group(self, new_group: Group) -> None:
+        self.group.remove_student(self)
+        new_group.add_student(self)
+        self.group = new_group
+
     def request_transcript(self) -> Transcript:
         return self.transcript
 
@@ -31,8 +36,3 @@ class Student(Person):
             return True
         except Exception:
             return False
-
-    def transfer_to_group(self, new_group: Group) -> None:
-        self.group.remove_student(self)
-        new_group.add_student(self)
-        self.group = new_group
