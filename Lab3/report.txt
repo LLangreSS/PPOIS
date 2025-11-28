@@ -1,0 +1,82 @@
+Система управления складом 50 классов + 12 классов исключений
+Кол-во полей: 195
+Кол-во методов: 150
+Кол-во ассоциаций: 74
+
+--DELIVIRIES--
+Delivery 5 5 -> Supplier, DeliveryItem, ReceivingReport, DuplicateDeliveryError
+DeliveryItem 4 2 -> Product, Batch, IdGenerator
+ReceivingReport 4 3 -> Delivery, Product, Employee
+UnloadingOperation 5 2 -> Delivery, Employee, Warehouse, InventorySlot
+
+--ORDERS--
+CustomerOrder 5 5 -> OrderLine, Product, PickingList
+OrderLine 3 4 -> Product
+PackingSlip 2 3 -> Product
+PickingList 4 4 -> InventorySlot, ReservedSlot
+RefundNote 5 2 -> Employee
+ReturnRequest 6 3 -> Product
+Shipment 7 5 -> Batch, PackingSlip, ShippingLabel
+ShippingLabel 4 3 ->
+
+--PRODUCTS--
+Barcode 1 3 ->
+ExpirationPolicy 2 3 ->
+Product 8 4 -> ProductCategory, ProductSpecification, Barcode, Supplier, UnitOfMeasure, ProductTag
+ProductCategory 3 4 -> ProductCategory
+ProductSpecification 6 4 -> Pallet
+ProductTag 2 2 ->
+UnitOfMeasure 3 1 ->
+
+--STAFF--
+Employee 5 3 -> Role, Shift
+Permission 2 1 ->
+ReplenishmentTask 6 2 -> Product, Location
+Role 2 3 -> Permission
+Shift 3 3 ->
+TaskAssignment 5 3 -> Employee
+WarehouseOperator 1 3 -> Employee, InternalTransfer, UnauthorizedOperationError
+
+--SUPPLIERS--
+DeliverySchedule 4 2 -> Supplier
+IncidentReport 7 1 -> Delivery, Supplier, Employee
+Manufacturer 4 2 ->
+Supplier 4 2 ->
+SupplierCategory 3 3 -> Supplier
+SupplierContract 5 2 -> Supplier
+SupplierPerformance 1 2 -> Delivery
+SupplierPortalEvent 4 2 -> Supplier
+
+--WAREHOUSE--
+Batch 6 3 -> Product, StorageCondition
+Container 3 3 -> Product
+InternalTransfer 7 3 -> Product
+InventorySlot 5 5 -> Location, Batch, ReservedSlot
+Location 4 3 ->
+Pallet 4 6 -> Batch, Location
+ReservedSlot 4 2 ->
+Shelf 4 4 -> Pallet
+StorageCondition 5 2 ->
+StorageZone 5 4 -> Shelf, StorageCondition
+Warehouse 4 5 -> StorageZone, WarehouseConfig, InventorySlot, Batch, Pallet, IdGenerator, Location
+WarehouseConfig 5 2 -> StorageCondition
+
+--UTILS--
+DateTimeProvider 0 3 ->
+IdGenerator 1 2 ->
+NotificationCenter 1 3 ->
+ValidationRule 2 4 -> Product
+
+--EXCEPTIONS--
+DuplicateDeliveryError -> 0 0
+IncompatibleStorageConditionError -> 0 0
+ExpiredProductError -> 0 0
+InvalidBarcodeError -> 0 0
+InsufficientStockError -> 0 0
+InvalidLocationError -> 0 0
+InvalidConfigurationError -> 0 0
+OverloadedPalletError -> 0 0
+OrderFulfillmentError -> 0 0
+ProductNotFoundError -> 0 0
+UnauthorizedOperationError -> 0 0
+SlotAllocationError -> 0 0
